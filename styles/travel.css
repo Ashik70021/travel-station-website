@@ -2,8 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -43,11 +44,12 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    width: 73.125rem;
     margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
 }
+.hamburger{
+    visibility: hidden;
+}
+
 .nav-bar>ul {
     display: flex;
 
@@ -87,11 +89,10 @@ body {
 }
 
 .banner-img {
-    display: block;
+    width: 100%;
     margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 16px;
+    min-height: 600px;
     filter: brightness(80%);
 }
 
@@ -147,7 +148,7 @@ body {
 } 
 /*---------Our Popular Tours Section styles------- */
 .our-popular-tours {
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -190,7 +191,7 @@ body {
 /*---------Choose Your Destination Section styles------- */
 
 .choose-your-destination {
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -232,7 +233,7 @@ body {
 }
 
 .destination-img-section{
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -247,7 +248,7 @@ body {
 
 }
 .create-holiday-card{
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right:auto;
@@ -278,7 +279,7 @@ body {
 
 /*---------Why Choose Us Section styles------- */
 .why-choose-us {
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -388,11 +389,11 @@ body {
 .newsletter-section {
     display: flex;
     margin: auto;
-    width: 73.125rem;
+    width: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    gap: 24px;
+    gap: 24px; 
 
 }
 
@@ -417,6 +418,7 @@ body {
     font-weight: 400;
     line-height: 26px;
     padding-bottom: 24px;
+    
 }
 
 hr.line {
@@ -461,20 +463,17 @@ hr.line {
     text-align: center;
 }
 
-/* .newsletter-save-up {
+ .newsletter-save-up {
     position: absolute;
-    top: 65%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-} 
-
-.newsletter-save-up {
-    position: relative;
-    bottom: 100px;
+    bottom: 95px;
+    right: 10px;
     transform: rotate(-19.628deg);
+} 
+ .newsletter-save-up {
+    width: 300px;
     border-radius: 20px;
     background: #FF5400;
-
+    padding: 0;
 }
 
 .newsletter-save-up .text-description {
@@ -483,6 +482,7 @@ hr.line {
     font-family: Mulish;
     font-size: 24px;
     font-weight: 400;
+    padding: 0;
    
 }
 
@@ -491,15 +491,16 @@ hr.line {
     font-family: Mulish;
     font-size: 32px;
     font-weight: 800;
-} */
+}
 
 
 /* -------------footer section styles---------------- */
 
 .footer-section {
+   
     margin-top: 100px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
     background: rgba(19, 19, 24, 0.05);
 }
 
@@ -529,10 +530,10 @@ hr.line-2 {
     margin-bottom: 50px;
 }
 
-.copyright {
-    margin-left: auto;
-    margin-right: auto;
+
+.copyright-massage{
     color: #131318;
+    padding-bottom: 40px;
     font-family: Inter;
     font-size: 16px;
     font-weight: 300;
@@ -541,7 +542,78 @@ hr.line-2 {
 
 
 /* -----------------Responsive Section------------------ */
+
 @media screen and (max-width: 600px) {
+    body{
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+  
+    .banner-content h1{
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: Mulish; 
+    }
+    .banner-content p{
+      font-size: 0.8rem;
+      line-height: 21px;
+    }
 
+    .nav{
+      justify-content: space-around;
+    }
+  
+    .banner-info-input{
+      padding: 20px;
+      flex-direction: column;
+    }
+  
+    .nav-bar{
+      visibility: hidden;
+      display: none;
+    }
+    .hamburger{
+      visibility: visible;
+      padding-top: 20px;
+    }
+    .our-popular-tours{
+      margin-top: 25px;  
+      flex-direction: column;
+    }
+    .our-popular-tours-image{
+      order: 1;
+    }
+    .our-popular-tours-content{
+      order: 2;
+    }
+
+    .maldives-indonesia,
+    .srilanka-america-kashmir,
+    .bangladesh-bandarban{
+      flex-direction: column;
+    }
+    .destination-image{
+        width: 100%;
+    }
+  
+    .why-choose-us-cards{
+      width: 100%;
+    }
+    .cards{
+      flex-direction: column;
+    }
+    .newsletter-section{
+      width: 100%;
+      flex-direction: column;
+    }
+    .newsletter-picture{
+        width: 100%;
+    }
+    .newsletter-save-up {
+        position: absolute;
+        bottom: 45px;
+        right: 10px;
+        transform: rotate(-19.628deg);
+  }
+  
 }
-
