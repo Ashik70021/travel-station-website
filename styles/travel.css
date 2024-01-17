@@ -99,7 +99,7 @@ body {
     margin-top: 50px;
     border-radius: 16px;
     min-height: 600px;
-    filter: brightness(80%);
+    filter: brightness(70%);
 }
 
 .banner-content{
@@ -649,11 +649,3 @@ hr.line-2 {
   }
 
 }
-/* @media screen and (min-width: 992px){
-    .maldives-indonesia, .srilanka-america-kashmir, .bangladesh-bandarban{
-        padding-left: 41.5%;
-    }
-    .create-holiday-card{
-        padding-left: 47%;
-    }
-} */
