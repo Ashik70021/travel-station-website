@@ -37,6 +37,12 @@ body {
     cursor: pointer;
     border: 0;
 }
+.btn-primary:hover{
+    color: #FF5400;
+    background: none;
+    border: 1px solid #FF5400;
+    
+}
 
 /*-------------- Header Section Styles -------------- */
 
@@ -153,9 +159,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
+
 
 .our-popular-tours .text-title {
     color: #131318;
@@ -210,6 +217,9 @@ body {
     color: rgba(19, 19, 24, 0.70);
     text-align: center;
 }
+.destination-img-section{
+    justify-items: center;
+}
 .maldives, .indonesia, .srilanka,
 .america, .kashmir, .bangladesh, .bandarban{
     position: relative;
@@ -232,16 +242,13 @@ body {
     display: block;
 }
 
-.destination-img-section{
+.maldives-indonesia, .srilanka-america-kashmir, 
+.bangladesh-bandarban{
     width: 100%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.maldives-indonesia, .srilanka-america-kashmir, .bangladesh-bandarban{
     display: flex;
+    justify-items: center;
     gap: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 20px; 
 }
 /*----------- Create a holiday plan  -----------*/
 .choose-your-destination{
@@ -450,7 +457,6 @@ hr.line {
 }
 
 .newsletter-content .btn-primary {
-    color: #FFF;
     text-align: center;
     font-size: 20px;
     font-weight: 800;
@@ -514,6 +520,14 @@ hr.line {
     padding-top: 15px;
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+.footer-description .text-description{
+    color: #5A5A5D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
 }
 
 .footer-social-links {
@@ -538,7 +552,8 @@ hr.line-2 {
     font-size: 16px;
     font-weight: 300;
     text-align: center;
-}
+    line-height: 10px;
+} 
 
 
 /* -----------------Responsive Section------------------ */
@@ -550,13 +565,14 @@ hr.line-2 {
     }
   
     .banner-content h1{
-      font-size: 1.5rem;
+      padding-top: 50px;
+      font-size: 2rem;
       font-weight: 800;
       font-family: Mulish; 
     }
     .banner-content p{
-      font-size: 0.8rem;
-      line-height: 21px;
+      font-size: 1rem;
+      
     }
 
     .nav{
@@ -564,9 +580,25 @@ hr.line-2 {
     }
   
     .banner-info-input{
-      padding: 20px;
-      flex-direction: column;
+      margin-top: 0;
+      padding: 16px;
+      flex-direction: column; 
+     
     }
+    .banner-info-input {
+        padding: 16px;
+    }
+    
+    .where-go,
+    .when,
+    .select-type {
+        width: 20rem;
+    }
+    
+    .banner-info-input .btn-primary {
+        width: 20rem;
+    } 
+    
   
     .nav-bar{
       visibility: hidden;
@@ -615,5 +647,13 @@ hr.line-2 {
         right: 10px;
         transform: rotate(-19.628deg);
   }
-  
+
 }
+/* @media screen and (min-width: 992px){
+    .maldives-indonesia, .srilanka-america-kashmir, .bangladesh-bandarban{
+        padding-left: 41.5%;
+    }
+    .create-holiday-card{
+        padding-left: 47%;
+    }
+} */
